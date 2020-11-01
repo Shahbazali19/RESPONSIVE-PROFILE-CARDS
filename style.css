@@ -1,0 +1,146 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url("../images/pexels-bich-tran-669996.jpg");
+}
+
+.container{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.card{ 	
+	width: 300px; height: 400px;
+	position: relative;
+	cursor: pointer;
+	overflow: hidden;
+	margin:15px;
+	box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.card img{
+	width: 100%; height: 100%;
+	object-fit: cover;
+	transition: all 0.3s;
+}
+
+.details{
+	width: 100%;
+	position: absolute;
+	bottom: 0; left: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color:wheat;
+	padding: 20px 10px;
+	transform: translateY(100%);
+	transition: all 0.3s;
+}
+
+.details h2{
+	font-family: 'Raleway', sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size:  14px;
+	color: #0c0c0c;
+}
+
+.details a{
+	display: inline-block;
+	margin-left: 20px;
+	transform: translateY(50px);
+	transition: all 0.3s;
+	color: #050505;
+}
+
+
+
+.details a:first-child{ transition-delay: 0.1s; }
+
+.details a:nth-child(2){ transition-delay: 0.2s; }
+
+.details a:last-child{ transition-delay: 0.3s; }
+
+.card:hover img{ transform: scale(1.2); }
+
+.card:hover .details, .card:hover .details a{ transform: none; }
+
+@media (max-width: 360px){
+
+	.card{
+		width: auto;
+		flex: 1 1 100%;
+	}
+
+	.details h2, .details a{ font-size: 14px; }
+
+}
+
+.wrapper {
+    
+    height: 10%;
+    width: 100%;
+    place-items: center;
+    padding-left: 5%;
+  
+  }
+.wrapper{
+    display: inline-flex;
+    
+  }
+  .wrapper .icon{
+    margin: 9px 9px;
+  
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    z-index: 2;
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .wrapper .icon span{
+    display: block;
+    height: 50px;
+	width: 50px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .wrapper .icon span i{
+	line-height: 60px;
+	margin-left: -1px;
+	margin-top: -5px;
+	font-size: 20px;
+	
+  }
+  
+  .wrapper .icon:hover span{
+    color: #fff;
+  }
+  .wrapper .icon:hover span{
+    text-shadow: 0px -1px 0px rgba(0,0,0,0.4);
+  }
+  .wrapper .facebook:hover span{
+    background: #3B5999;
+  }
+  .wrapper .twitter:hover span{
+    background: #46C1F6;
+  }
+  .wrapper .instagram:hover span{
+    background: #e1306c;
+  }
+  
